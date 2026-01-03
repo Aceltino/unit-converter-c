@@ -1,0 +1,18 @@
+# Build artifacts
+bin/
+obj/
+
+# Editor / OS
+*.swp
+*.swo
+*.log
+.DS_Store
+
+# Docker
+*.tar
+
+# Debug
+core
+
+output/
+*.o

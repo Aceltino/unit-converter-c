@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "conversao.h": "c",
+        "tempo.h": "c",
+        "massa.h": "c",
+        "volume.h": "c",
+        "estilo.h": "c",
+        "utils.h": "c"
+    }
+}
