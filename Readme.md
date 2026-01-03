@@ -35,7 +35,7 @@ Supported physical quantities:
 
 ## 🧱 Project Architecture
 
-```
+```text
 src/
 ├── main.c            # Entry point
 ├── menus.c/.h        # Menu interface
@@ -53,97 +53,145 @@ src/
 │   ├── utils.c
 │   └── headers/
 │       └── *.h
-Build-generated directories:
+```
 
-obj/ → object files
+**Build-generated directories:**
 
-bin/ → final binary
+- `obj/` → object files  
+- `bin/` → final binary  
 
-⚙️ Build & Run (Local)
-Build
+---
+
+## ⚙️ Build & Run (Local)
+
+### Build
+```bash
 make
-Run
-make run
-Clean
-make clean
-🐳 Running with Docker
-⚠️ This is an interactive program
-Always run the container using -it
+```
 
+### Run
+```bash
+make run
+```
+
+### Clean
+```bash
+make clean
+```
+
+---
+
+## 🐳 Running with Docker
+
+> ⚠️ This is an **interactive program**  
+> Always run the container using `-it`
+
+```bash
 docker build -t conversor-c .
 docker run --rm -it conversor-c
-🛠️ Tech Stack
-C
+```
 
-GCC
+---
 
-Makefile
+## 🛠️ Tech Stack
 
-Docker (multi-stage build)
+- **C**
+- **GCC**
+- **Makefile**
+- **Docker (multi-stage build)**
+- **Linux**
 
-Linux
+---
 
-🤝 Contributing
-Contributions are highly welcome 🚀
+## 🤝 Contributing
+
+Contributions are **highly welcome** 🚀  
 This repository was intentionally structured to make adding new conversion modules easy and safe.
 
-🌱 Git Contribution Workflow
-1️⃣ Fork & Clone
+---
+
+## 🌱 Git Contribution Workflow
+
+### 1️⃣ Fork & Clone
+
+```bash
 git clone https://github.com/your-username/conversor-c.git
 cd conversor-c
-2️⃣ Branch Strategy
-Always branch from main.
+```
 
-Naming convention:
+---
 
+### 2️⃣ Branch Strategy
+
+Always branch from `main`.
+
+**Naming convention:**
+```
 feature/module-name
 fix/short-description
 refactor/short-description
-Examples:
+```
 
+**Examples:**
+```bash
 git checkout -b feature/energy
 git checkout -b fix/menu-input-validation
-❌ Never commit directly to main.
+```
 
-3️⃣ Commits
+❌ Never commit directly to `main`.
+
+---
+
+### 3️⃣ Commits
+
 Use clear, concise, and technical messages:
 
+```
 Add energy conversion module
 Fix input validation loop
 Refactor shared utility functions
-➕ Adding a New Conversion Module
-Step-by-step:
+```
 
-Create a new module in src/modulos/
+---
 
-Add the corresponding header in src/modulos/headers/
+## ➕ Adding a New Conversion Module
 
-Implement conversion logic
+**Step-by-step:**
 
-Integrate it into menus.c
+1. Create a new module in `src/modulos/`
+2. Add the corresponding header in `src/modulos/headers/`
+3. Implement conversion logic
+4. Integrate it into `menus.c`
+5. Update the `Makefile`
+6. Build and test:
+   ```bash
+   make clean && make && make run
+   ```
 
-Update the Makefile
+---
 
-Build and test:
+## 📐 Best Practices
 
-make clean && make && make run
-📐 Best Practices
 - Clean and readable code
 - Small, well-defined functions
 - Organized headers
 - Proper input validation
 - Zero compiler warnings
 
-🔁 Pull Requests
+---
+
+## 🔁 Pull Requests
+
 When opening a PR:
 
-Clearly describe what was changed
+- Clearly describe what was changed
+- Explain why the change was made
+- Keep PRs small and focused
 
-Explain why the change was made
+---
 
-Keep PRs small and focused
+## 🚀 Roadmap
 
-🚀 Roadmap
 - Codebase standardization:
   - Rename folders, files, and identifiers from Portuguese to English
   - Unify naming conventions across the entire project
@@ -153,5 +201,4 @@ Keep PRs small and focused
 - Better separation between UI and business logic
 - Automated tests
 - Internationalization (PT / EN)
-
-
+```
